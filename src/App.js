@@ -55,7 +55,6 @@ function App() {
       typingEffect();
     }
   }, [currentScreen]);
-  
 
   // 사용자가 답변을 선택했을 때 처리하는 함수
   const handleAnswer = (selectedOption) => {
@@ -120,6 +119,16 @@ function App() {
             className="px-4 py-2 bg-green-500 text-white font-semibold rounded hover:bg-green-600"
           >
             링크 복사하기
+          </button>
+          <button
+            onClick={() => {
+              setScore(0);
+              setCurrentQuestionIndex(0);
+              setCurrentScreen("intro");
+            }}
+            className="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 mt-4"
+          >
+            처음으로 가기
           </button>
         </div>
       )}
