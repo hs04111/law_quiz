@@ -70,6 +70,16 @@ function App() {
     }
   };
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText("http://bit.ly/3VAoUsB")
+      .then(() => {
+        alert("URL이 복사되었습니다");
+      })
+      .catch(() => {
+        alert("URL 복사에 실패했습니다");
+      });
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       {/* 소개 화면 */}
@@ -115,10 +125,10 @@ function App() {
           {/* 최종 점수 표시 */}
           <p className="text-lg mb-4">당신의 점수는 {score} / {quizData.length}입니다.</p>
           <button
-            onClick={() => navigator.clipboard.writeText(window.location.href)} // 링크 복사
+            onClick={copyToClipboard} // 공유하기 버튼 동작
             className="px-4 py-2 bg-green-500 text-white font-semibold rounded hover:bg-green-600"
           >
-            링크 복사하기
+            공유하기
           </button>
           <button
             onClick={() => {
