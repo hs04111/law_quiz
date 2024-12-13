@@ -214,7 +214,9 @@ function App() {
   const resultRef = useRef(null);
 
   const introText =
-    "헌법은 우리의 권리와 의무를 담고 있는 가장 중요한 법입니다. 하지만 헌법을 알고 계신가요? 재미있는 퀴즈로 헌법을 배우고, 나의 헌법 등급을 확인해보세요!";
+    "헌법은 우리의 권리와 의무를 담고 있는 가장 중요한 법입니다.\n" +
+    "하지만 헌법을 알고 계신가요?\n" +
+    "재미있는 퀴즈로 헌법을 배우고, 나의 헌법 등급을 확인해보세요!";
 
   useEffect(() => {
     if (currentScreen === "intro") {
@@ -331,7 +333,7 @@ function App() {
           <h1 className="text-2xl font-bold mb-4">
             헌법 퀴즈에 오신 것을 환영합니다!
           </h1>
-          <p className="text-gray-600 mb-4 whitespace-pre-wrap leading-relaxed">
+          <p className="text-gray-600 mb-4 whitespace-pre-wrap leading-relaxed text-xs">
             {typedText}
           </p>
           <button
