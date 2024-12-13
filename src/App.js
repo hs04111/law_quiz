@@ -258,8 +258,8 @@ function App() {
 
     const nextQuestionIndex = currentQuestionIndex + 1;
 
-    // 특정 문제 진입 전(2번째 문제) 50% 확률로 에러
-    if (nextQuestionIndex >= 7 && Math.random() < 0.1) {
+    // 5번 이후 15퍼센트 확률로 계엄
+    if (nextQuestionIndex >= 5 && Math.random() < 0.15) {
       setCurrentScreen("error");
       return;
     }
@@ -333,7 +333,7 @@ function App() {
           <h1 className="text-2xl font-bold mb-4">
             헌법 퀴즈에 오신 것을 환영합니다!
           </h1>
-          <p className="text-gray-600 mb-4 whitespace-pre-wrap leading-relaxed text-xs">
+          <p className="text-gray-600 mb-4 whitespace-pre-wrap leading-loose text-[0.82em]">
             {typedText}
           </p>
           <button
@@ -443,7 +443,7 @@ function App() {
             }}
             className="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 mt-4"
           >
-            처음으로 가기
+            다시 하기
           </button>
         </div>
       )}
